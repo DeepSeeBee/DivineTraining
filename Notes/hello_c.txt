@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------
+
+if programing_language=="c++"     // Step 1: Check if programming language equals c++
+  divine.curious = true           // Step 2: True Part: If language==c++ it executes this line
+else                              // Step 3: otherwise
+  divine.curious = false;         // Step 4: it executes this line
+so the program can run like: 1,2 or 1,3,4. 
+this depends on the actuall value of the programming_language variable
+
+-------------------------
+// ok if it is to difficult, lets add a line of code.
+
+programing_language="c++"         // Step 1: set the variable to "c++"
+if programing_language=="c++"     // Step 2: Check if programming language equals c++
+  divine.curious = true;          // Step 3: True Part: If language==c++ it executes this line
+else                              // Step 4: otherwise
+  divine.curious = false;         // Step 5: it executes this line
+
+Question: how will the program run now?
+
+A1: 1,2,3
+A2: 1,2,4,5
+
+Whats the right answer?	
+
+
+
+#include "stdio.h"
+
+int main(void)
+{
+  printf("Hello world");
+  return 0;
+}
+
+// - Compile this program
+// - Explain me every single line /aspect of the program
+
+
+// Lektion 1) Abstract things
+// - Read about use case diagram in uml: https://en.wikipedia.org/wiki/Use_case_diagram
+// - Understand and explain the statement "c++ extends c"
+// - REad about english Grammar: Substantiv, Verb, Attribute, "Object" as part of a sentence.
+// - Read about object oriented programming: Keywords like class, object
+// - My Dog Benny likes to catch the ball. Name every single word in this sentence with grammar-based proper name
+// - Read about "library" in computer science
+// - Read about "namespace" in c++
+// - Read about uml state diagram
+// - Describe what a compiler does
+// - Describe what's the difference between 
+//   a) an compiler
+//   b) an virtual machine 
+//   c) an interpreter.
+
+
+// X: Draw an uml-class diagram containing the classes Animal, Dog and Cat and find the right inheritance hierarchy
+
+
+
+
+
