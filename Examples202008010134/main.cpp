@@ -4,9 +4,15 @@
 
 void Example202008010140()
 {
-    // the code demonstrates the difference bettween int numbers and floating point numbers.
+    // Passed: 202008010141
+    //
+    // the code demonstrates the difference between int numbers and floating point numbers.
     // where int can only store numbers withiout digits, flaoting point data types can store numbers with digits.
     // we used two different data types that are called int and double in this example
+    // More info:
+    // - https://en.wikipedia.org/wiki/Integer_(computer_science)
+    // - https://en.wikipedia.org/wiki/Floating-point_arithmetic
+
     int i = 1;
     double d = 0.5;
 
@@ -19,6 +25,8 @@ void Example202008010140()
 
 void Example202008010147()
 {
+    // Passed: 202008011345
+
     int    i  = 3;
     double d  = 0.5;
     double r1 = i * d;
@@ -33,6 +41,10 @@ void Example202008010147()
 
 void Example202008010151()
 {
+    // Current: 202008011500
+    // MoreInfo:
+    // - https://www.youtube.com/watch?v=LpuPe81bc2w
+
     int    i1  = 127;
     char   c1  = i1;
     int    i2  = 256;
@@ -49,6 +61,9 @@ void Example202008010151()
 
 void Example202008010156()
 {
+    // More info:
+    // - https://en.wikipedia.org/wiki/Pointer_(computer_programming)
+
     int  i = 0;
     int* a = &i; // we declare the variable as a pointer '*' and use the adress operator '&' to gain the adress of the variable.
 
@@ -63,9 +78,9 @@ void Example202008010158()
     int i = 0;
     std::cout << "Example202008010158:" << std::endl;
     std::cout << "This demonstrates assignment of a variable." << std::endl;
-    std::cout << "Value before assignment " << i << std::endl;
+    std::cout << "Value before assignment: " << i << std::endl;
     i = 1;
-    std::cout << "Value after  assignment " << i << std::endl;
+    std::cout << "Value after  assignment: " << i << std::endl;
     std::cout << std::endl;
 }
 
@@ -76,9 +91,9 @@ void Example202008010200()
 
     std::cout << "Example202008010200:" << std::endl;
     std::cout << "This demonstrates assignment of variable through a pointer." << std::endl;
-    std::cout << "Value before assignment " << i << std::endl;
+    std::cout << "Value before assignment through pointer: " << i << std::endl;
     *p = 1;
-    std::cout << "Value after  assignment " << i << std::endl;
+    std::cout << "Value after  assignment through pointer: " << i << std::endl;
     std::cout << std::endl;
 }
 
@@ -118,9 +133,9 @@ void Example202008010202()
 void Example202008010204()
 {
     const int count = 5;
-    int i[count];
+    int i[count]; // This is an array. It stores 5 int numbers.
 
-    i[0] = 1;
+    i[0] = 1; // We can set the first item in the array like this. And for the other items it goes like:
     i[1] = 2;
     i[2] = 3;
     i[3] = 4;
@@ -272,12 +287,46 @@ void Example202008010235()
     string[2] = 'l';
     string[3] = 'l';
     string[4] = 'o';
-    string[5] = 0; // The last character must be 0 so the proram knows, where the string ends.
+    string[5] = 0; // The last character must be 0 so the program knows, where the string ends.
 
     char* pString = string;
     std::cout << "Example202008010235:" << std::endl;
     std::cout << "This demonstrates getting the pointer to a char array: " << pString << std::endl;
     std::cout << std::endl;
+}
+
+void Example202008021924()
+{
+    // More info:
+    // - https://en.wikipedia.org/wiki/Modulo_operation
+    // - https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Left_shift_%3C%3C
+    // - https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Bitwise_AND_&
+
+    int nr = 129;
+
+    std::cout << "Example202008021924:" << std::endl;
+    std::cout << "This demonstrates printing the binary representation of a integer number: " << std::endl;
+    std::cout << "dec(" << nr << ") = bin(";
+
+    for(int pos = 0; pos < 32; ++pos)
+    {
+        // 1. We make a space after each byte (8 bits)
+        if((pos % 8) == 0
+        && pos > 0)
+            std::cout << " ";
+
+        int bit = 31 - pos;
+
+        // 2. We print "0" or "1".
+        int val = (nr >> bit) & 1;
+
+        if(val == 0)
+            std::cout << "0";
+        else
+            std::cout << "1";
+    }
+
+    std::cout << ")" << std::endl;
 }
 
 int main()
@@ -286,7 +335,7 @@ int main()
     Example202008010147();
     Example202008010151();
     Example202008010156();
-    Example202008010158();
+   /* Example202008010158();
     Example202008010200();
     Example202008010201();
     Example202008010202();
@@ -299,6 +348,8 @@ int main()
     Example202008010224();
     Example202008010227();
     Example202008010228();
+    Example202008021924();
+*/
 
     return 0;
 }
