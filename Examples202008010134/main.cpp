@@ -1,4 +1,5 @@
 // This demonstrates some fundamental mechanisms of the c programming language.
+// Hello Divine!
 
 #include <iostream>
 
