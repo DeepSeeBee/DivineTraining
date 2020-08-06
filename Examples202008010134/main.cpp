@@ -24,6 +24,9 @@ void Example202008010140()
     std::cout << "This is a Int-Value: " << i << std::endl;
     std::cout << "This is a Dbl-Value: " << d << std::endl;
     std::cout << std::endl;
+
+    // Q01: What is the difference between an int-data type and a double data type?
+    // A01:
 }
 
 void Example202008010147()
@@ -40,6 +43,12 @@ void Example202008010147()
     std::cout << "This is result 1: " << r1 << std::endl;
     std::cout << "This is result 2: " << r2 << std::endl;
     std::cout << std::endl;
+
+    // Q01: What errors can arise from the demonstrated behaviour?
+    // A01:
+    // Q02: What is the purpose of a data type cast?
+    // A03:
+
 }
 
 void Example202008010151()
