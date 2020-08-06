@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1596678211 source:d:\dev\divinetraining\examples202008060315_compositum\main.cpp
+	<iostream>
+	<list>
+
