@@ -301,6 +301,7 @@ void Example202008021924()
     // - https://en.wikipedia.org/wiki/Modulo_operation
     // - https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Left_shift_%3C%3C
     // - https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Bitwise_AND_&
+    // - https://en.wikipedia.org/wiki/Logical_conjunction#Applications_in_computer_engineering
 
     int nr = 129;
 
@@ -312,7 +313,7 @@ void Example202008021924()
     {
         // 1. We make a space after each byte (8 bits)
         if((pos % 8) == 0
-        && pos > 0)
+        &&  pos > 0)
             std::cout << " ";
 
         int bit = 31 - pos;
