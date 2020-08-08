@@ -80,26 +80,30 @@ void Example202008010152()
     std::cout << "Example202008010152:" << std::endl;
     std::cout << "This demonstrates the sizes and ranges of different integer types." << std::endl;
 
-    std::cout << "sizeof(char)    = " << sizeof(char) << " byte(s) = " << sizeof(char) * 8 << " bit(s)" << std::endl;
-    std::cout << "sizeof(int)     = " << sizeof(int)  << " byte(s) = " << sizeof(int)  * 8 << " bit(s)" << std::endl;
-    std::cout << "sizeof(long)    = " << sizeof(long) << " byte(s) = " << sizeof(long) * 8 << " bit(s)" << std::endl;
+    std::cout << "sizeof(char)      = " << sizeof(char) << " byte(s) = " << sizeof(char) * 8 << " bit(s)" << std::endl;
+    std::cout << "sizeof(int)       = " << sizeof(int)  << " byte(s) = " << sizeof(int)  * 8 << " bit(s)" << std::endl;
+    std::cout << "sizeof(long)      = " << sizeof(long) << " byte(s) = " << sizeof(long) * 8 << " bit(s)" << std::endl;
 
-    std::cout << "sizeof(int8_t)  = " << sizeof(int8_t) * 8 << " bit(s)." << std::endl;
-    std::cout << "sizeof(int16_t) = " << sizeof(int16_t) * 8 << " bit(s)." << std::endl;
-    std::cout << "sizeof(int32_t) = " << sizeof(int32_t) * 8 << " bit(s)." << std::endl;
-    std::cout << "sizeof(int64_t) = " << sizeof(int64_t) * 8 << " bit(s)." << std::endl;
+    std::cout << "sizeof(int8_t)    = " << sizeof(int8_t)  * 8 << " bit(s)" << std::endl;
+    std::cout << "sizeof(int16_t)   = " << sizeof(int16_t) * 8 << " bit(s)" << std::endl;
+    std::cout << "sizeof(int32_t)   = " << sizeof(int32_t) * 8 << " bit(s)" << std::endl;
+    std::cout << "sizeof(int64_t)   = " << sizeof(int64_t) * 8 << " bit(s)" << std::endl;
 
     std::cout << "int8_t  .min      = " << numeric_limits<uint16_t >::min() << std::endl;
     std::cout << "int8_t  .max      =  " << numeric_limits<uint16_t >::max() << std::endl;
+    std::cout << "uint8_t .min      =  " << numeric_limits<uint16_t >::min() << std::endl;
     std::cout << "uint8_t .max      =  " << numeric_limits<uint16_t >::max() << std::endl;
     std::cout << "int16_t .min      = " << numeric_limits<int16_t >::min() << std::endl;
     std::cout << "int16_t .max      =  " << numeric_limits<int16_t >::max() << std::endl;
+    std::cout << "uint16_t.min      =  " << numeric_limits<uint16_t>::min() << std::endl;
     std::cout << "uint16_t.max      =  " << numeric_limits<uint16_t>::max() << std::endl;
     std::cout << "int32_t .min      = " << numeric_limits<int32_t >::min() << std::endl;
     std::cout << "int32_t .max      =  " << numeric_limits<int32_t >::max() << std::endl;
+    std::cout << "uint32_t .min     =  " << numeric_limits<uint32_t>::min() << std::endl;
     std::cout << "uint32_t .max     =  " << numeric_limits<uint32_t>::max() << std::endl;
     std::cout << "int64_t .min      = " << numeric_limits<int64_t >::min() << std::endl;
     std::cout << "int64_t .max      =  " << numeric_limits<int64_t >::max() << std::endl;
+    std::cout << "uint64_t .min     =  " << numeric_limits<uint64_t>::min() << std::endl;
     std::cout << "uint64_t .max     =  " << numeric_limits<uint64_t>::max() << std::endl;
 }
 
