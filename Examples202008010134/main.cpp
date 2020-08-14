@@ -42,6 +42,8 @@ void Example202008010140()
     // A06:
     // Q07: What is the name of the data type 'int' ?
     // A07:
+    // Q08: What is the technical term for "name" ?
+    // A08:
     //
     // Sample-Answers:
     // A01: The purpose of a variable is to store a value.
@@ -51,6 +53,7 @@ void Example202008010140()
     // A05: The purpose of a double variable is to store floating point numbers.
     // A06: The name    of variable 'i' is 'i'.
     // A07: The name    of data type 'int' is 'int'.
+    // A08: The technical term for "name" is "identifier".
 }
 
 void Example202008010147()
