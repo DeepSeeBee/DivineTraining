@@ -19,8 +19,8 @@ void Example202008010140()
     // - https://en.wikipedia.org/wiki/Integer_(computer_science)
     // - https://en.wikipedia.org/wiki/Floating-point_arithmetic
 
-    int i = 1;
-    double d = 0.5;
+    int i = 1; //declare variable i of type int and assign init value
+    double d = 0.5; //declare variable d of type double and assign init value
 
     std::cout << "Example202008010140:" << std::endl;
     std::cout << "This demonstrates the difference between int and floating point numbers." << std::endl;
