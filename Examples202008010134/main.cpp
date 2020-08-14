@@ -28,8 +28,29 @@ void Example202008010140()
     std::cout << "This is a Dbl-Value: " << d << std::endl;
     std::cout << std::endl;
 
-    // Q01: What is the difference between an int-data type and a double data type?
+    // Q01: What is the purpose of a variable?
     // A01:
+    // Q02: What is the purpose of the name of a variabe?
+    // A02:
+    // Q03: What is the purpose of the data type of a variable?
+    // A03:
+    // Q04: What is the purpose of a int data type?
+    // A04:
+    // Q05: What is the purpose of a double data type?
+    // A05:
+    // Q06: What is the name of the variable 'i' ?
+    // A06:
+    // Q07: What is the name of the data type 'int' ?
+    // A07:
+    //
+    // Sample-Answers:
+    // A01: The purpose of a variable is to store a value.
+    // A02: The purpose of the name of a variable is to distinguish between different variables.
+    // A03: The purpose of the data type of a variable is to define, what kind of values can be stored in a variable.
+    // A04: The purpose of the int data type is to store real numbers.
+    // A05: The purpose of a double variable is to store floating point numbers.
+    // A06: The name    of variable 'i' is 'i'.
+    // A07: The name    of data type 'int' is 'int'.
 }
 
 void Example202008010147()
