@@ -20,7 +20,7 @@ class Dog
 :
     public Animal // A dog is a animal
 {
-    // Here we define the abstract method.
+    // Here we override the abstract method.
     // A dog has a special way to talk...
     public: virtual void Talk()
     {
@@ -32,7 +32,7 @@ class Cat
 :
     public Animal // A cat is a animal
 {
-    // Here we define the abstract method.
+    // Here we overide the abstract method.
     // A cat has a special way to talk...
     public: virtual void Talk()
     {
