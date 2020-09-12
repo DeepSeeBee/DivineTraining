@@ -9,17 +9,20 @@ using namespace std;
 class CDate
 {
     // A date has a year
+    // So we define a member variable for that.
     public: int Year;
 
     // A date has a month
+    // So we define a member variable for that.
     public: int Month;
 
     // A date has a day.
+    // So we define a member variable for that.
     public: int Day;
 
-    // This is the "Constructor" a special method to create the object
+    // This is the "Constructor" a special method called to create the object
     CDate()
-    : // Initializer-List: init all with 0
+    : // Initializer-List: init all member variable with 0
         Year(0)
     ,   Month(0)
     ,   Day(0)
@@ -31,6 +34,45 @@ class CDate
     {
         cout << "Date: " << this->Year << "-" << this->Month << "-" << this->Day << endl;
     }
+
+
+/* We'll add support for windows datetime later.
+   Forget about this block for now.
+
+    // This method converts the Date {Year,Month,Day} to a single value that represets the date in the specific value.
+    public: static uint32_t ToPlatformSpecificUInt32()
+    {
+        // There are certain ways to represent a date in a single uint32 number.
+        // The most common way is, to store the number of seconds starting at a certain time.
+        // The problem doing so is, that we can not store a datetime that is before this day.
+        // Also a problem is, that the exact format which is used may be platform dependent.
+        // That means for example if we convert a date 1.1.2020 to a single value
+        // we may get a different date when we convert the single value back on a different platform.
+        // This is why applications often use a datatype for date like we defined it here
+        // and also uses it's own specification of how datetimes are converted to a single value.
+        // see https://en.wikipedia.org/wiki/C_date_and_time_functions
+        //
+        // TODO
+        // Not implemented.
+        return 0;
+    }
+
+    // This method converts a platformspecific single value representing the date into a date object like we defined it here.
+    public: static CDate FromPlatformSpecificUInt32(uint32_t aValue)
+    {
+        // TODO
+        // Not implemented.
+        return CDate();
+    }
+
+    public: static CDate Now()
+    {
+        // TODO
+        // Not implemented.
+        return CDate();
+    }
+
+*/
 
 };
 
@@ -71,8 +113,11 @@ int main()
 {
     cout << "This program demonstrates use of classes" << endl;
 
-    // Here we create a instance of the class 'Person' and set it's member veriables:
+    // Here we create a instance of the class 'Person'
+    // That will call the object's constructor
     CPerson aCharly;
+
+    // we set it's member veriables:
     aCharly.FirstName = "Charly";
     aCharly.LastName = "Beck";
     aCharly.Birthday.Year = 1875;
