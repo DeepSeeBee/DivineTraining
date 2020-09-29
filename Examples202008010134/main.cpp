@@ -10,7 +10,9 @@ using namespace std;
 
 void Example202008010140()
 {
-    // Passed: 202008010141
+    // Passed:
+    // 202008010141
+    // 202008162312
     //
     // the code demonstrates the difference between int numbers and floating point numbers.
     // where int can only store numbers withiout digits, flaoting point data types can store numbers with digits.
@@ -28,6 +30,7 @@ void Example202008010140()
     std::cout << "This is a Dbl-Value: " << d << std::endl;
     std::cout << std::endl;
 
+    // Questions:
     // Q01: What is the purpose of a variable?
     // A01:
     // Q02: What is the purpose of the name of a variabe?
@@ -74,8 +77,46 @@ void Example202008010147()
     // Q01: What errors can arise from the demonstrated behaviour?
     // A01:
     // Q02: What is the purpose of a data type cast?
-    // A03:
+    // A02:
+}
 
+void Example202008010148()
+{
+    std::cout << "Example202008010148:" << std::endl;
+    std::cout << "This demonstrates different cast styles." << std::endl;
+
+    int i = 0;
+    double d = 0;
+
+    i = d;                    // This is a implicit cast.
+    i = (int) d;              // This is a explicit 'old' c   style cast
+    i = static_cast<int>(d);  // This is a explicit 'new' c++ style cast
+
+    // Note:
+    // In c++ there is also a reinterpret_cast and a dynamic_cast keyword.
+    // The difference to the static_cast you will see later.
+
+    // Q01: What does 'explicit' mean when talking about data type casts?
+    // A01:
+    // Q02: What does 'implicit' mean when talking about data type casts?
+    // A02:
+    // Q03: What is the advantage of explicit coding style?
+    // A03:
+    // Q04: What is the advantage of implicit coding style?
+    // A04:
+
+    // Sample-Answers:
+    // A01: Explicit means that you       see code that obviously tells you, what is happening.
+    // A02: Implicit means that you don't see code that obviosuly tells you, what is happening.
+    // A03:
+    //    - Explicit makes it more obvious what is happening so tht beginners are remembered of all things going on.
+    //    - IF there are several possibilites different compilers could react differently when doing it implicit.
+    //      When we tell the compiler explicitely what we want to achive,
+    //      the danger of errors when porting to anoteher platform is less.
+    // A04: Implicit coding makes the code smaller and (if you know what is going on) more easy to read.
+    //
+    // Note: Different behaviour of the microsoft c++ compiler and the arm stm32 gnu compiler is likely to happen
+    //       when using implicit casts, especially on different int-types.
 }
 
 void Example202008010151()
@@ -113,22 +154,41 @@ void Example202008010152()
     std::cout << "sizeof(int32_t)   = " << sizeof(int32_t) * 8 << " bit(s)" << std::endl;
     std::cout << "sizeof(int64_t)   = " << sizeof(int64_t) * 8 << " bit(s)" << std::endl;
 
-    std::cout << "int8_t  .min      = " << numeric_limits<uint16_t >::min() << std::endl;
+    std::cout << "int8_t  .min      = "  << numeric_limits<uint16_t >::min() << std::endl;
     std::cout << "int8_t  .max      =  " << numeric_limits<uint16_t >::max() << std::endl;
     std::cout << "uint8_t .min      =  " << numeric_limits<uint16_t >::min() << std::endl;
     std::cout << "uint8_t .max      =  " << numeric_limits<uint16_t >::max() << std::endl;
-    std::cout << "int16_t .min      = " << numeric_limits<int16_t >::min() << std::endl;
-    std::cout << "int16_t .max      =  " << numeric_limits<int16_t >::max() << std::endl;
-    std::cout << "uint16_t.min      =  " << numeric_limits<uint16_t>::min() << std::endl;
-    std::cout << "uint16_t.max      =  " << numeric_limits<uint16_t>::max() << std::endl;
-    std::cout << "int32_t .min      = " << numeric_limits<int32_t >::min() << std::endl;
-    std::cout << "int32_t .max      =  " << numeric_limits<int32_t >::max() << std::endl;
-    std::cout << "uint32_t .min     =  " << numeric_limits<uint32_t>::min() << std::endl;
-    std::cout << "uint32_t .max     =  " << numeric_limits<uint32_t>::max() << std::endl;
-    std::cout << "int64_t .min      = " << numeric_limits<int64_t >::min() << std::endl;
-    std::cout << "int64_t .max      =  " << numeric_limits<int64_t >::max() << std::endl;
-    std::cout << "uint64_t .min     =  " << numeric_limits<uint64_t>::min() << std::endl;
-    std::cout << "uint64_t .max     =  " << numeric_limits<uint64_t>::max() << std::endl;
+    std::cout << "int16_t .min      = "  << numeric_limits<int16_t  >::min() << std::endl;
+    std::cout << "int16_t .max      =  " << numeric_limits<int16_t  >::max() << std::endl;
+    std::cout << "uint16_t.min      =  " << numeric_limits<uint16_t >::min() << std::endl;
+    std::cout << "uint16_t.max      =  " << numeric_limits<uint16_t >::max() << std::endl;
+    std::cout << "int32_t .min      = "  << numeric_limits<int32_t  >::min() << std::endl;
+    std::cout << "int32_t .max      =  " << numeric_limits<int32_t  >::max() << std::endl;
+    std::cout << "uint32_t.min      =  " << numeric_limits<uint32_t >::min() << std::endl;
+    std::cout << "uint32_t.max      =  " << numeric_limits<uint32_t >::max() << std::endl;
+    std::cout << "int64_t .min      = "  << numeric_limits<int64_t  >::min() << std::endl;
+    std::cout << "int64_t .max      =  " << numeric_limits<int64_t  >::max() << std::endl;
+    std::cout << "uint64_t.min      =  " << numeric_limits<uint64_t >::min() << std::endl;
+    std::cout << "uint64_t.max      =  " << numeric_limits<uint64_t >::max() << std::endl;
+
+    // Questions:
+    // Q01: How many bits has 1 byte?
+    // A01:
+    // Q02: How many bits has an int32?
+    // A02:
+    // Q03: How many bytes has one int32?
+    // A03:
+    // Q04: How many bits has the smallest datatype on common personal computer architecture?
+    // A04:
+
+    // SampleAnswers:
+    // A01: One Byte has 8 bits.
+    // A02: One int32 has 32 bits.
+    // A03: One int32 has 4 bytes.
+    // A04: The smalles data type on popular platforms is 8 bits long.
+    //
+    // Note: There are also platforms that may work with 4 bits for example.
+
 }
 
 void Example202008010156()
@@ -375,6 +435,25 @@ void Example202008021924()
     // - https://en.wikipedia.org/wiki/Bitwise_operations_in_C#Bitwise_AND_&
     // - https://en.wikipedia.org/wiki/Logical_conjunction#Applications_in_computer_engineering
 
+    // In binary system every binary digit has a potential value.
+    // This potential value is determined by calculating 2^BitIdx.
+    // BitIdx is 0 based meaning we start from 0 in opposite of starting counting with 1.
+    // To convert a binary number to decimal, the potential values of all 1-bits are added.
+    // The potential values of digits with binary value 0 are ignored.
+    //
+    // BitIdx:                        |  3    |  2 |   1 |  0   |
+    // PotentialValue-Pow-Calculation | 2^3   |2^2 | 2^1 | n/a  |
+    // PotentialValue-Calculation     | 2*2*2 |2*2 | 2   |  1   |
+    // PotentialValue                 |  8    | 4  | 2   |  1   |
+    // ExampleBinary Number           |  1    | 0  | 1   |  0   |
+    // ExamplePotential (Recognized)  |  8    | 0  | 1   |  0   |
+    // Decimal Represantation of Bin(1010) = 8 + 0 + 2 + 0 = dec(10)
+    //
+    // More binary digits work the same way by extending the table on the left side with more digits following the pattern.
+    //
+    // Question 1: What is the decimal value for bin(1010 1010)
+    // Answer   1: 128+32+8+2=170
+
     int nr = 129;
 
     std::cout << "Example202008021924:" << std::endl;
@@ -406,6 +485,7 @@ int main()
 {
     Example202008010140();
     Example202008010147();
+    Example202008010148();
     Example202008010151();
     Example202008010152();
    /* Example202008010156();
